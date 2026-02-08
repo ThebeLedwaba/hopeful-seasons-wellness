@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Therapy - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Individual Therapy</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 4rem 1.5rem;">
+            <div style="max-width: 800px; margin: 0 auto;" class="animate-on-scroll">
+                <div
+                    style="margin-bottom: 3rem; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <img src="../../assets/images/service-individual.jpg" alt="Individual Therapy Session"
+                        style="width: 100%; height: 400px; object-fit: cover;">
+                </div>
+                <p>Individual therapy provides a confidential and supportive environment where you can explore your
+                    thoughts, feelings, and behaviors. It is a collaborative process between you and the therapist.</p>
+
+                <h3>What We Treat</h3>
+                <ul>
+                    <li>Anxiety and Stress Management</li>
+                    <li>Depression and Mood Disorders</li>
+                    <li>Trauma and PTSD</li>
+                    <li>Grief and Bereavement</li>
+                    <li>Self-esteem and Personal Growth</li>
+                    <li>Life Transitions</li>
+                </ul>
+
+                <h3>Our Approach</h3>
+                <p>We use an integrative approach drawing from Psychodynamic Therapy and Cognitive Behavioral Therapy
+                    (CBT) to help you gain insight into your patterns and develop practical coping mechanisms.</p>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="../contact.html" class="btn btn-primary">Book an Appointment</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        fetch('../../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                let content = data.replace(/href="pages\/services\//g, 'href="');
+                content = content.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                content = content.replace(/src="\.\.\/assets/g, 'src="../../assets');
+                content = content.replace(/href="\.\.\/assets/g, 'href="../../assets');
+                document.getElementById('header-placeholder').innerHTML = content;
+                initializeNavigation();
+            });
+        fetch('../../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                let content = data.replace(/href="pages\/services\//g, 'href="');
+                content = content.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                document.getElementById('footer-placeholder').innerHTML = content;
+            });
+    </script>
+</body>
+
+</html>

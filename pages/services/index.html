@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Our Services</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 4rem 1.5rem;">
+            <p class="section-intro">We offer a range of professional psychological services tailored to your needs.
+                Explore our services below to find the support that is right for you.</p>
+
+            <div class="services-grid">
+                <!-- Links adjusted for depth -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user"></i></div>
+                    <div class="service-content">
+                        <h3>Individual Therapy</h3>
+                        <p>Personalized sessions to address anxiety, depression, trauma, personal growth, and more.</p>
+                        <a href="individual-therapy.html" class="service-link">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user-friends"></i></div>
+                    <div class="service-content">
+                        <h3>Couples Therapy</h3>
+                        <p>Support for couples facing relationship challenges, communication issues, or life
+                            transitions.</p>
+                        <a href="couples-therapy.html" class="service-link">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <div class="service-content">
+                        <h3>Family Therapy</h3>
+                        <p>Helping families improved communication, resolve conflicts, and strengthen their bonds.</p>
+                        <a href="family-therapy.html" class="service-link">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="service-content">
+                        <h3>Assessments</h3>
+                        <p>Comprehensive psycho-legal and clinical assessments for children and adults.</p>
+                        <a href="assessments.html" class="service-link">Learn More <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        fetch('../../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                // Adjust paths for being 2 levels deep
+                let content = data.replace(/href="pages\/services\//g, 'href="'); // fix self refs
+                content = content.replace(/href="pages\//g, 'href="../'); // fix other pages
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"'); // fix home
+                content = content.replace(/src="\.\.\/assets/g, 'src="../../assets'); // fix logo
+                document.getElementById('header-placeholder').innerHTML = content;
+                initializeNavigation();
+            });
+        fetch('../../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                let content = data.replace(/href="pages\/services\//g, 'href="');
+                content = content.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                document.getElementById('footer-placeholder').innerHTML = content;
+            });
+    </script>
+</body>
+
+</html>

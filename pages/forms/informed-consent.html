@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informed Consent & Practice Agreement - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+        }
+
+        .form-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-field label {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .input-field input {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+        }
+
+        .signature-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .sig-line {
+            border-top: 1px solid #333;
+            margin-top: 2.5rem;
+            padding-top: 0.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .policy-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .policy-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .policy-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .form-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .page-header {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .signature-area {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Practice Agreement</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 2rem 1.5rem 5rem;">
+            <div class="text-center no-print" style="margin-bottom: 2rem;">
+                <p>Psychotherapy Informed Consent & Practice Agreement</p>
+                <button onclick="window.print()" class="btn btn-secondary">
+                    <i class="fas fa-print"></i> Print for Signature
+                </button>
+            </div>
+
+            <div class="form-container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2 style="margin-bottom: 0.5rem;">Psychotherapy Informed Consent</h2>
+                    <p style="color: var(--primary-color); font-weight: 600;">& PRACTICE AGREEMENT</p>
+                </div>
+
+                <form>
+                    <div class="input-field">
+                        <label for="client-name">Client Name</label>
+                        <input type="text" id="client-name" name="client-name">
+                    </div>
+                    <div class="input-field">
+                        <label for="client-dob">Date of Birth</label>
+                        <input type="date" id="client-dob" name="client-dob">
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Introduction & Purpose</h3>
+                        <p>This document provides important information about your psychotherapy services, your rights,
+                            and the terms under which Hopeful Seasons Wellness will provide psychological support. It is
+                            designed to help you make an informed decision about therapy. An informed consent form
+                            should give clients clear expectations about the process, confidentiality, risks, and limits
+                            of therapy.</p>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Nature of Therapy</h3>
+                        <p>Psychotherapy is a collaborative process. It may involve discussion of feelings, thoughts,
+                            life patterns, and behaviours, and can include emotional discomfort at times. Outcomes vary
+                            for each individual no specific result or guarantee of improvement can be assured.</p>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Therapist Background</h3>
+                        <p>Your therapist is a registered Clinical Psychologist trained in systems-based, client-centred
+                            therapy incorporating psychodynamic and cognitive behavioural approaches.</p>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Confidentiality</h3>
+                        <p>Your information is confidential and will not be shared without your written consent except
+                            where required by law, such as if there is risk of harm to yourself or others or where
+                            required by court order or legal process.</p>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Fees & Payments</h3>
+                        <ul class="policy-list">
+                            <li><strong>Standard fee per session:</strong> R1100 (cash payment) unless otherwise agreed.
+                            </li>
+                            <li><strong>Medical aid claims:</strong> dependent on your plan coverage and benefits;
+                                receipts will be provided where applicable.</li>
+                            <li>Fees for extended assessments and reports (e.g., psycho-legal) will be discussed and
+                                confirmed in writing before commencement.</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Cancellation Policy</h3>
+                        <ul class="policy-list">
+                            <li>Please provide 24 hours’ notice for cancellations.</li>
+                            <li>Late cancellations or missed sessions may be charged in full.</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Client Rights</h3>
+                        <p>You have the right to:</p>
+                        <ul class="policy-list">
+                            <li>Ask questions about my qualifications or therapy process.</li>
+                            <li>Withdraw from therapy at any time.</li>
+                            <li>Request clarification on policies or decisions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Voluntary Participation</h3>
+                        <p>Participation in therapy is voluntary. You may discontinue therapy at any time without
+                            penalty.</p>
+                    </div>
+
+                    <div class="signature-area">
+                        <div>
+                            <div class="sig-line">Client Signature</div>
+                        </div>
+                        <div>
+                            <div class="sig-line">Date</div>
+                        </div>
+                    </div>
+
+                    <div class="signature-area" style="margin-top: 3rem;">
+                        <div>
+                            <div class="sig-line">Therapist Signature</div>
+                        </div>
+                        <div>
+                            <div class="sig-line">Date</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        fetch('../../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                let content = data.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                content = content.replace(/src="\.\.\/assets\//g, 'src="../../assets/');
+                content = content.replace(/href="\.\.\/assets\//g, 'href="../../assets/');
+                document.getElementById('header-placeholder').innerHTML = content;
+                initializeNavigation();
+            });
+        fetch('../../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                let content = data.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                content = content.replace(/src="\.\.\/assets\//g, 'src="../../assets/');
+                content = content.replace(/href="\.\.\/assets\//g, 'href="../../assets/');
+                document.getElementById('footer-placeholder').innerHTML = content;
+            });
+    </script>
+</body>
+
+</html>

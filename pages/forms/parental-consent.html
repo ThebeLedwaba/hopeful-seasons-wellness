@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parental Consent Form - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+        }
+
+        .form-section h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.25rem;
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-field label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .input-field input,
+        .input-field select {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--secondary-bg);
+            border-radius: var(--radius-sm);
+        }
+
+        .checkbox-group input {
+            margin-top: 0.25rem;
+        }
+
+        .signature-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .sig-line {
+            border-top: 1px solid #333;
+            margin-top: 3rem;
+            padding-top: 0.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .form-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .page-header {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .input-group,
+            .signature-area {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Parental Consent Form</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 2rem 1.5rem 5rem;">
+            <div class="text-center no-print" style="margin-bottom: 2rem;">
+                <p>Please fill out this form for child psychotherapy sessions.</p>
+                <button onclick="window.print()" class="btn btn-secondary">
+                    <i class="fas fa-print"></i> Print for Signature
+                </button>
+            </div>
+
+            <div class="form-container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2 style="margin-bottom: 0.5rem;">PARENTAL CONSENT FORM</h2>
+                    <p style="color: var(--primary-color); font-weight: 600;">FOR CHILD PSYCHOTHERAPY</p>
+                </div>
+
+                <form>
+                    <!-- 1. CHILD DETAILS -->
+                    <div class="form-section">
+                        <h3>1. CHILD DETAILS</h3>
+                        <div class="input-group">
+                            <div class="input-field">
+                                <label for="child-name">Full Name of Child</label>
+                                <input type="text" id="child-name" name="child-name">
+                            </div>
+                            <div class="input-field">
+                                <label for="child-dob">Date of Birth</label>
+                                <input type="date" id="child-dob" name="child-dob">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-field">
+                                <label for="child-age">Age</label>
+                                <input type="number" id="child-age" name="child-age">
+                            </div>
+                            <div class="input-field">
+                                <label for="child-school">School (if applicable)</label>
+                                <input type="text" id="child-school" name="child-school">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. PARENT / LEGAL GUARDIAN DETAILS -->
+                    <div class="form-section">
+                        <h3>2. PARENT / LEGAL GUARDIAN DETAILS</h3>
+                        <div class="input-group">
+                            <div class="input-field">
+                                <label for="parent-name">Full Name</label>
+                                <input type="text" id="parent-name" name="parent-name">
+                            </div>
+                            <div class="input-field">
+                                <label for="relationship">Relationship to Child</label>
+                                <input type="text" id="relationship" name="relationship">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-field">
+                                <label for="id-number">ID Number</label>
+                                <input type="text" id="id-number" name="id-number">
+                            </div>
+                            <div class="input-field">
+                                <label for="contact-number">Contact Number</label>
+                                <input type="tel" id="contact-number" name="contact-number">
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="confirm-authority" name="confirm-authority">
+                            <label for="confirm-authority">I confirm that I am the legal parent/guardian of the
+                                above-named child and have the authority to provide consent for psychological
+                                services.</label>
+                        </div>
+                    </div>
+
+                    <!-- 3. NATURE AND PURPOSE -->
+                    <div class="form-section">
+                        <h3>3. NATURE AND PURPOSE OF PSYCHOTHERAPY</h3>
+                        <p>Psychotherapy for children may involve:</p>
+                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
+                            <li>Talking, play-based, art-based, or activity-based therapeutic methods</li>
+                            <li>Emotional, behavioural, social, or developmental support</li>
+                            <li>Parent guidance sessions when clinically indicated</li>
+                        </ul>
+                        <p>The purpose of therapy is to support the child’s psychological wellbeing and development.
+                            Outcomes cannot be guaranteed.</p>
+                    </div>
+
+                    <!-- 4. CONFIDENTIALITY -->
+                    <div class="form-section">
+                        <h3>4. CONFIDENTIALITY</h3>
+                        <p>All information shared in therapy is treated as confidential. However, confidentiality cannot
+                            be guaranteed in the following circumstances:</p>
+                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
+                            <li>If there is a risk of harm to the child or others</li>
+                            <li>If abuse or neglect is disclosed (mandatory reporting applies)</li>
+                            <li>If records are subpoenaed by a court of law</li>
+                        </ul>
+                        <p>Parents will receive general feedback about progress, themes, and recommendations. Specific
+                            disclosures made by the child will remain confidential unless disclosure is clinically or
+                            legally required.</p>
+                    </div>
+
+                    <!-- 5. PARENTAL INVOLVEMENT -->
+                    <div class="form-section">
+                        <h3>5. PARENTAL INVOLVEMENT</h3>
+                        <p>Parents may be involved through:</p>
+                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
+                            <li>Initial assessment and intake</li>
+                            <li>Feedback sessions</li>
+                            <li>Periodic review meetings</li>
+                        </ul>
+                        <p>The psychologist determines the level of parental involvement in the child’s best interest.
+                        </p>
+                    </div>
+
+                    <!-- 6. FEES, CANCELLATIONS, AND PAYMENT -->
+                    <div class="form-section">
+                        <h3>6. FEES, CANCELLATIONS, AND PAYMENT</h3>
+                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
+                            <li>Fees are payable as per the practice fee structure</li>
+                            <li>Cancellations must be made at least 24 hours in advance</li>
+                            <li>Late cancellations or non-attendance may be billed in full</li>
+                        </ul>
+                        <p>Medical aid claims (if applicable) remain the responsibility of the parent/guardian.</p>
+                    </div>
+
+                    <!-- 7. RECORD KEEPING & DATA PROTECTION -->
+                    <div class="form-section">
+                        <h3>7. RECORD KEEPING & DATA PROTECTION</h3>
+                        <p>Psychological records are maintained securely in accordance with POPIA and HPCSA guidelines.
+                            Records are retained for the legally required period.</p>
+                    </div>
+
+                    <!-- 8. CONSENT -->
+                    <div class="form-section">
+                        <h3>8. CONSENT</h3>
+                        <p>I have read and understood the information above. I have had the opportunity to ask questions
+                            and consent to psychotherapy services for my child.</p>
+
+                        <div class="signature-area">
+                            <div>
+                                <div class="sig-line">Parent / Guardian Name</div>
+                            </div>
+                            <div>
+                                <div class="sig-line">Signature</div>
+                            </div>
+                        </div>
+                        <div class="signature-area">
+                            <div>
+                                <div class="sig-line">Date</div>
+                            </div>
+                            <div>
+                                <!-- Placeholder for Psychologist -->
+                            </div>
+                        </div>
+
+                        <div class="signature-area" style="margin-top: 4rem;">
+                            <div>
+                                <div class="sig-line">Psychologist Signature</div>
+                            </div>
+                            <div>
+                                <div class="sig-line">Date</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        fetch('../../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                // Fix paths for nested directory
+                let content = data.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                content = content.replace(/src="\.\.\/assets\//g, 'src="../../assets/');
+                content = content.replace(/href="\.\.\/assets\//g, 'href="../../assets/');
+                document.getElementById('header-placeholder').innerHTML = content;
+                initializeNavigation();
+            });
+        fetch('../../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                // Fix paths for nested directory
+                let content = data.replace(/href="pages\//g, 'href="../');
+                content = content.replace(/href="index.html"/g, 'href="../../index.html"');
+                content = content.replace(/src="\.\.\/assets\//g, 'src="../../assets/');
+                content = content.replace(/href="\.\.\/assets\//g, 'href="../../assets/');
+                document.getElementById('footer-placeholder').innerHTML = content;
+            });
+    </script>
+</body>
+
+</html>

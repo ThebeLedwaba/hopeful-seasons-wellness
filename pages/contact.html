@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 4rem 1.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+
+                <!-- Contact Info -->
+                <div>
+                    <h2>Get in Touch</h2>
+                    <p>We would love to hear from you. Please reach out to schedule an appointment or if you have any
+                        questions.</p>
+
+                    <div style="margin-top: 2rem;">
+                        <div class="contact-item" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                            <i class="fas fa-phone"
+                                style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem; color: var(--text-dark); font-weight: 700;">Phone
+                                </h4>
+                                <a href="tel:+27673890946"
+                                    style="font-size: 1.1rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">067
+                                    389 0946</a>
+                            </div>
+                        </div>
+                        <div class="contact-item" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                            <i class="fas fa-envelope"
+                                style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem; color: var(--text-dark); font-weight: 700;">Email
+                                </h4>
+                                <a href="mailto:info@hopefulseasonswellness.co.za"
+                                    style="font-size: 1.1rem; color: var(--primary-color); font-weight: 500; text-decoration: underline;">info@hopefulseasonswellness.co.za</a>
+                            </div>
+                        </div>
+                        <div class="contact-item" style="display: flex; gap: 1rem;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--primary-color); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem; color: var(--text-dark); font-weight: 700;">Location
+                                </h4>
+                                <address
+                                    style="font-style: normal; font-size: 1.1rem; color: var(--text-dark); line-height: 1.5;">
+                                    60 6th Street<br>
+                                    Parkhurst, Randburg<br>
+                                    Johannesburg
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h2>Send a Message</h2>
+                    <form action="../forms/contact-form.php" method="POST"
+                        style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem;">Name</label>
+                            <input type="text" id="name" name="name" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-sm);">
+                        </div>
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
+                            <input type="email" id="email" name="email" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-sm);">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem;">Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-sm);">
+                        </div>
+                        <div>
+                            <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-sm);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Initialize Supabase
+                if (typeof initSupabase === 'function') initSupabase();
+
+                const contactForm = document.querySelector('form[action*="contact-form.php"]');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const btn = contactForm.querySelector('button');
+                        const originalText = btn.innerText;
+                        btn.disabled = true;
+                        btn.innerText = 'Sending...';
+
+                        const formData = new FormData(contactForm);
+                        const data = Object.fromEntries(formData.entries());
+
+                        try {
+                            // 1. Save to Supabase
+                            const { error: dbError } = await supabaseClient
+                                .from('contacts')
+                                .insert([data]);
+
+                            if (dbError) throw dbError;
+
+                            // 2. Trigger notification
+                            const { error: notiError } = await sendNotification({
+                                type: 'contact',
+                                ...data
+                            });
+
+                            if (notiError) {
+                                console.error('Notification error:', notiError);
+                                // Kept silent for production, but logged for debugging
+                            }
+
+                            alert('Thank you for your message! We have received it and will get back to you soon.');
+                            contactForm.reset();
+                        } catch (err) {
+                            console.error('Submission error:', err);
+                            alert('Error sending message: ' + (err.message || 'Please try again later.'));
+                        } finally {
+                            btn.disabled = false;
+                            btn.innerText = originalText;
+                        }
+                    });
+                }
+            });
+        </script>
+        <div class="text-center" style="padding: 1rem; background: var(--light-gray);">
+            <a href="https://maps.app.goo.gl/r5R5X7Y2zXoZ7o8E9" target="_blank" class="service-link">
+                <i class="fas fa-external-link-alt"></i> View on Google Maps
+            </a>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../assets/js/supabase-config.js"></script>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        fetch('../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data.replace(/href="pages\//g, 'href="').replace(/href="index.html"/g, 'href="../index.html"');
+                initializeNavigation();
+            });
+        fetch('../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data.replace(/href="pages\//g, 'href="').replace(/href="index.html"/g, 'href="../index.html"');
+            });
+    </script>
+</body>
+
+</html>

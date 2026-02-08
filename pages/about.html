@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>About Hopeful Seasons Wellness</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 4rem 1.5rem;">
+            <div class="about-content">
+                <h2>Our Approach</h2>
+                <p>At Hopeful Seasons Wellness, we believe that healing is a journey unique to each individual. Our
+                    approach is grounded in empathy, respect, and professional expertise.</p>
+                <p>We provide a safe, confidential space where you can explore your thoughts and feelings without
+                    judgment. Whether you are navigating a difficult life transition, coping with anxiety or depression,
+                    or seeking personal growth, we are here to support you.</p>
+
+                <h3>Meet the Therapist</h3>
+                <div style="display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;" class="animate-on-scroll">
+                    <div style="flex: 1; min-width: 300px;">
+                        <img src="../assets/images/therapist-portrait-1.jpg" alt="Thembelihle Hope Magubane"
+                            style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    </div>
+                    <div style="flex: 2;">
+                        <p>I am <strong>Thembelihle Hope Magubane</strong>, a clinical psychologist with years of
+                            experience in treating a wide range of psychological conditions. With a focus on
+                            evidence-based practices, we tailor treatment plans to meet your specific needs.</p>
+                        <p><strong>Qualifications:</strong></p>
+                        <ul>
+                            <li>Master's Degree in Clinical Psychology</li>
+                            <li>HPCSA Registered: PS 014 5734</li>
+                            <li>BHF Practice Number: 0977969</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Our Space</h3>
+                <p>We have created a warm, safe, and comfortable environment where you can feel at ease.</p>
+                <div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap;" class="animate-on-scroll">
+                    <div style="flex: 1; min-width: 250px;">
+                        <img src="../assets/images/office-1.jpg" alt="Hopeful Seasons Wellness Office - Heating"
+                            style="width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <img src="../assets/images/office-2.jpg" alt="Hopeful Seasons Wellness Office - Seating"
+                            style="width: 100%; height: 250px; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                    </div>
+                </div>
+                <div style="margin-top: 4rem; text-align: center;" class="animate-on-scroll">
+                    <h3>Clinical Expertise</h3>
+                    <p>With extensive training and years of practice in both public and private sectors, our experience
+                        covers a
+                        broad spectrum of mental health services.</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h3>Areas of Special Interest</h3>
+                    <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
+                        <li>Trauma and PTSD</li>
+                        <li>Mood Disorders (Depression, Bipolar)</li>
+                        <li>Anxiety Disorders</li>
+                        <li>Relationship and Family Dynamics</li>
+                        <li>Bereavement and Grief</li>
+                        <li>Adjustment Disorders</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <h3>Professional Background</h3>
+                    <p>Our psychologist has worked in various settings including:</p>
+                    <div class="services-grid" style="margin-top: 1rem;">
+                        <div class="service-card" style="padding: 1.5rem;">
+                            <h4>Public Health</h4>
+                            <p>Providing essential psychological care in government hospitals and community clinics.
+                            </p>
+                        </div>
+                        <div class="service-card" style="padding: 1.5rem;">
+                            <h4>Private Practice</h4>
+                            <p>Offering specialized, long-term therapy for individuals and families in a private
+                                setting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        fetch('../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data.replace(/href="pages\//g, 'href="').replace(/href="index.html"/g, 'href="../index.html"');
+                initializeNavigation();
+            });
+        fetch('../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data.replace(/href="pages\//g, 'href="').replace(/href="index.html"/g, 'href="../index.html"');
+            });
+    </script>
+</body>
+
+</html>

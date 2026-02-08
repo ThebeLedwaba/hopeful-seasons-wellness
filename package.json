@@ -1,0 +1,31 @@
+{
+  "name": "hopeful-seasons-wellness",
+  "version": "1.0.0",
+  "description": "Professional therapy website for Hopeful Seasons Wellness",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server .",
+    "build-css": "postcss assets/css/style.css -o assets/css/style.min.css",
+    "watch-css": "postcss assets/css/style.css -o assets/css/style.min.css --watch",
+    "minify-js": "terser assets/js/*.js -o assets/js/min/ -c -m",
+    "optimize-images": "imagemin assets/images/* --out-dir=assets/images/optimized",
+    "build": "npm run build-css && npm run minify-js",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "therapy",
+    "psychology",
+    "wellness",
+    "counseling"
+  ],
+  "author": "Hopeful Seasons Wellness",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.0.0",
+    "postcss-preset-env": "^7.0.0",
+    "terser": "^5.15.0"
+  }
+}

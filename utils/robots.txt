@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /forms/
+Disallow: /includes/
+Disallow: /utils/
+Disallow: /*.php$
+Disallow: /*.log$
+
+# Sitemap
+Sitemap: https://www.hopefulseasonswellness.co.za/utils/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
+
+# Advertising bots
+User-agent: AdsBot-Google
+Allow: /
+
+# Image bots
+User-agent: Googlebot-Image
+Allow: /
+
+# Mediapartners Google
+User-agent: Mediapartners-Google
+Allow: /
+
+# Bing
+User-agent: bingbot
+Crawl-delay: 10
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Crawl-delay: 10
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Crawl-delay: 10
+Allow: /

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Hopeful Seasons Wellness</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Mental Health Resources</h1>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 4rem 1.5rem;">
+            <p>We believe in empowering our clients with knowledge and support outside of therapy sessions. Here are
+                some trusted resources for mental health information and emergency support.</p>
+
+            <div style="margin-top: 3rem;">
+                <h3>Emergency Contacts</h3>
+                <div
+                    style="background-color: #f8d7da; color: #721c24; padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid #f5c6cb;">
+                    <p><strong>If you or someone you know is in immediate danger, please call emergency services or go
+                            to the nearest casualty department.</strong></p>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li><strong>SADAG (SA Depression & Anxiety Group):</strong> 0800 567 567</li>
+                        <li><strong>Suicide Crisis Line:</strong> 0800 567 567</li>
+                        <li><strong>Lifeline:</strong> 0861 322 322</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3>Clinical Forms</h3>
+                <p>New clients are requested to complete the relevant forms before their first session.</p>
+                <div class="services-grid">
+                    <div class="service-card" style="padding: 1.5rem;">
+                        <div class="service-icon-small"><i class="fas fa-file-contract"></i></div>
+                        <h4>Informed Consent</h4>
+                        <p>General Psychotherapy Informed Consent & Practice Agreement.</p>
+                        <a href="forms/informed-consent.html" class="service-link">View Form <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card" style="padding: 1.5rem;">
+                        <div class="service-icon-small"><i class="fas fa-child"></i></div>
+                        <h4>Parental Consent</h4>
+                        <p>Required for clients under the age of 18.</p>
+                        <a href="forms/parental-consent.html" class="service-link">View Form <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card" style="padding: 1.5rem;">
+                        <div class="service-icon-small"><i class="fas fa-clipboard-list"></i></div>
+                        <h4>Intake Assessment</h4>
+                        <p>Detailed assessment form for clinical evaluation.</p>
+                        <a href="forms/intake-form.html" class="service-link">View Form <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3>Helpful Articles & Books</h3>
+                <div class="services-grid">
+                    <div class="service-card" style="padding: 1.5rem;">
+                        <h4>Understanding Anxiety</h4>
+                        <p>Learn more about the symptoms of anxiety and coping strategies.</p>
+                        <a href="#" class="service-link">Read More</a>
+                    </div>
+                    <div class="service-card" style="padding: 1.5rem;">
+                        <h4>Grief and Loss</h4>
+                        <p>Resources for navigating the difficult journey of bereavement.</p>
+                        <a href="#" class="service-link">Read More</a>
+                    </div>
+                    <!-- Add more resources as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        fetch('../includes/header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data.replace(/href="pages\//g, 'href="').replace(/href="index.html"/g, 'href="../index.html"');
+                initializeNavigation();
+            });
+        fetch('../includes/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data.replace(/href="pages\//g, 'href="').replace(/href="index.html"/g, 'href="../index.html"');
+            });
+    </script>
+</body>
+
+</html>

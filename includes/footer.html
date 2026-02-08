@@ -1,0 +1,284 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Logo and Description -->
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <h3>Hopeful Seasons Wellness</h3>
+                    <p class="footer-tagline">Clinical Psychology Practice</p>
+                </div>
+                <p class="footer-description">
+                    Providing compassionate, evidence-based therapy services
+                    in Johannesburg and online.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/14FKHgtELW1/" aria-label="Facebook" class="social-link"
+                        target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hopeful_seasons/" aria-label="Instagram" class="social-link"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/services/index.html">Services</a></li>
+                    <li><a href="pages/resources.html">Resources</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-column">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="pages/services/individual-therapy.html">Individual Therapy</a></li>
+                    <li><a href="pages/services/couples-therapy.html">Couples Therapy</a></li>
+                    <li><a href="pages/services/family-therapy.html">Family Therapy</a></li>
+                    <li><a href="pages/services/assessments.html">Psycho-Legal Assessments</a></li>
+                    <li><a href="pages/services/assessments.html#group-programs">Group Programs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+27673890946">067 389 0946</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:">Email Us</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <address>
+                            60 6th Street<br>
+                            Parkhurst, Randburg<br>
+                            Johannesburg
+                        </address>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>In-person:</strong> Saturdays 9am-2pm<br>
+                            <strong>Online:</strong> Weekdays 4pm-6pm
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; <span id="current-year"></span> Hopeful Seasons Wellness. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="pages/privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="pages/terms.html">Terms of Service</a>
+                    <span class="separator">|</span>
+                    <a href="pages/disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+            <p class="footer-note">
+                <em>HPCSA Registered Clinical Psychologist</em>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Action Button (FAB) -->
+<div class="fab-container">
+    <button class="fab-main" aria-label="Quick Contact">
+        <i class="fas fa-comment-medical"></i>
+    </button>
+    <div class="fab-options">
+        <a href="https://wa.me/27673890946" class="fab-option" aria-label="WhatsApp Us" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="fab-label">WhatsApp</span>
+        </a>
+        <a href="tel:+27673890946" class="fab-option" aria-label="Call Us">
+            <i class="fas fa-phone"></i>
+            <span class="fab-label">Call Now</span>
+        </a>
+    </div>
+</div>
+
+<style>
+    .site-footer {
+        background-color: var(--primary-footer);
+        color: var(--white);
+        padding: var(--spacing-3xl) 0 var(--spacing-lg);
+        border-top: 5px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-2xl);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+        color: var(--white);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .footer-logo h3 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .footer-tagline {
+        color: var(--primary-light);
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .footer-description {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .social-links {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: var(--white);
+        transition: all var(--transition-fast);
+    }
+
+    .social-link:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-3px);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+        color: var(--primary-color);
+        padding-left: var(--spacing-xs);
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .contact-item {
+        display: flex;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+
+    .contact-item i {
+        color: var(--primary-color);
+        margin-top: 3px;
+        min-width: 20px;
+    }
+
+    .contact-item a,
+    .contact-item address,
+    .contact-item div {
+        color: rgba(255, 255, 255, 0.8);
+        font-style: normal;
+        line-height: 1.5;
+    }
+
+    .contact-item a:hover {
+        color: var(--primary-color);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: center;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .footer-bottom p {
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0;
+    }
+
+    .footer-legal {
+        display: flex;
+        gap: var(--spacing-sm);
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-legal a {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: var(--font-size-sm);
+    }
+
+    .footer-legal a:hover {
+        color: var(--primary-color);
+    }
+
+    .separator {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer-note {
+        font-size: var(--font-size-sm);
+        color: rgba(255, 255, 255, 0.5);
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .footer-bottom-content {
+            flex-direction: column;
+        }
+
+        .footer-legal {
+            flex-direction: column;
+            gap: var(--spacing-xs);
+        }
+
+        .separator {
+            display: none;
+        }
+    }
+</style>
