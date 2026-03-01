@@ -86,7 +86,9 @@
                 let content = data.replace(/href="pages\/services\//g, 'href="'); // fix self refs
                 content = content.replace(/href="pages\//g, 'href="../'); // fix other pages
                 content = content.replace(/href="index.html"/g, 'href="../../index.html"'); // fix home
-                content = content.replace(/src="\.\.\/assets/g, 'src="../../assets'); // fix logo
+                // Fix: correct replacement for asset paths (e.g., logo)
+                content = content.replace(/src="\.\.\/assets\//g, 'src="../../assets/');
+                content = content.replace(/href="\.\.\/assets\//g, 'href="../../assets/');
                 document.getElementById('header-placeholder').innerHTML = content;
                 initializeNavigation();
             });

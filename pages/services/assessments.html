@@ -61,7 +61,9 @@
                 let content = data.replace(/href="pages\/services\//g, 'href="');
                 content = content.replace(/href="pages\//g, 'href="../');
                 content = content.replace(/href="index.html"/g, 'href="../../index.html"');
-                content = content.replace(/src="\.\.\/assets/g, 'src="../../assets');
+                // Fix: correct replacement for asset paths (e.g., logo)
+                content = content.replace(/src="\.\.\/assets\//g, 'src="../../assets/');
+                content = content.replace(/href="\.\.\/assets\//g, 'href="../../assets/');
                 document.getElementById('header-placeholder').innerHTML = content;
                 initializeNavigation();
             });
