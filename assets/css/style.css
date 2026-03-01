@@ -80,6 +80,14 @@ a:hover {
     color: var(--primary-dark);
 }
 
+/* Base Components & Logo */
+.site-logo {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+    transition: all var(--transition-normal);
+}
+
 /* Container */
 .container {
     width: 100%;
